@@ -1,0 +1,22 @@
+{
+  "name": "influencer",
+  "version": "1.0.0",
+  "description": "REST endpoint for Influencer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Influencer"
+  },
+  "keywords": [
+    "instagram",
+    "influencer"
+  ],
+  "author": "Joe Pires",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
