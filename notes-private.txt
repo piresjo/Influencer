@@ -1,0 +1,21 @@
+- To Get Access Key
+    1) https://api.instagram.com/oauth/authorize?client_id=303154967791198&redirect_uri=https://piresjo.github.io/Influencer/&scope=user_profile,user_media&response_type=code
+    2) Get code from url:
+        - Ex. AQDS6EBjUZTCPvcQeuxrxBFV-hz78y_6573Caac3JhoOgL1X-MgMDE5sa8_5smfX3mIGDWG0OWxQVDfsXSQdM3vnI2NRXRG5v-mxqzjDq2_DSRxOsdfy4hnMSc5Sga5l-Ypw8BDX2DYN_0vskgFS6GOy6sIVqnEiB1VVMnyQDrc2HZ_SNRT5XNl-6ifaLxwZrpAmkn0kGoKJu6_FUpqBmN8uRact1Qc3zDpgMLVVzorwkw
+    3) Fill In
+    curl -X POST \
+    https://api.instagram.com/oauth/access_token \
+    -F client_id=303154967791198 \
+    -F client_secret=15ab2590354c2d0999328badde7adb15 \
+    -F grant_type=authorization_code \
+    -F redirect_uri=https://piresjo.github.io/Influencer/ \
+    -F code=AQDS6EBjUZTCPvcQeuxrxBFV-hz78y_6573Caac3JhoOgL1X-MgMDE5sa8_5smfX3mIGDWG0OWxQVDfsXSQdM3vnI2NRXRG5v-mxqzjDq2_DSRxOsdfy4hnMSc5Sga5l-Ypw8BDX2DYN_0vskgFS6GOy6sIVqnEiB1VVMnyQDrc2HZ_SNRT5XNl-6ifaLxwZrpAmkn0kGoKJu6_FUpqBmN8uRact1Qc3zDpgMLVVzorwkw
+    4) Send to terminal
+    Result: {"access_token": "IGQVJWbmtwTUl3VHdnMk5GNHlZAZAEZAhdjhfNGlMUkpyM1hyRjNKTGlzRmZANWnVKT1gzd3ZAtbEhRakRZARUppbzNkaklPck93cS15TVBzT3NiTzNTZAzJDR2QzME5QenN0TmRGMjh4MkljRTdFNUhnX1dnSkJ3b0htNlB0VXln", "user_id": 17841412776513682}%
+
+- Query User Node
+    1) Make sure you have access Key
+    2) Fill out 
+    curl -X GET \
+    'https://graph.instagram.com/17841412776513682?fields=id,username&access_token=IGQVJWbmtwTUl3VHdnMk5GNHlZAZAEZAhdjhfNGlMUkpyM1hyRjNKTGlzRmZANWnVKT1gzd3ZAtbEhRakRZARUppbzNkaklPck93cS15TVBzT3NiTzNTZAzJDR2QzME5QenN0TmRGMjh4MkljRTdFNUhnX1dnSkJ3b0htNlB0VXln'
+    - Result: {"id":"17841412776513682","username":"thepostingweltgeist"}
